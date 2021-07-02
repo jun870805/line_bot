@@ -1,4 +1,6 @@
-* Item 1
-* Item 2
-  * Item 2a
-  * Item 2b
+# Line 聊天機器人建置
+
+* Line Bot
+* Python 
+  * Flask
+* Heroku
