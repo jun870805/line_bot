@@ -1,0 +1,8 @@
+gunicorn
+flask
+line-bot-sdk
+requests
+beautifulsoup4
+flask_socketio
+flasgger
+flask_cors
