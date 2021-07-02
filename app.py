@@ -55,7 +55,7 @@ def response(event):
     # Line bot Verify驗證 帳號排除 
     if event.source.user_id != "Udeadbeefdeadbeefdeadbeefdeadbeef":
         
-        response_text = "aaa"
+        response_text = "11"
         # 當 message text 之中有ptt才做爬蟲 否則回傳使用者輸入資訊
         if "ptt" in event.message.text.lower():
             # 簡單抓取PTT Stock 文章列表
