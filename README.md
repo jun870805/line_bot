@@ -43,16 +43,26 @@ Line 聊天機器人 架設
 
 選擇Create a Messaging API channel
 ![](https://github.com/jun870805/line_bot/blob/1.0.1/Image/chooseType.png?raw=true)
+
 channel icon (選填) ： 上傳聊天機器人logo圖片
+
 channel name (必填) ： 設定聊天機器人名稱
+
 channel description (必填) ： 設定聊天機器人描述
+
 ![](https://github.com/jun870805/line_bot/blob/1.0.1/Image/CreateChannel1.png?raw=true)
 Category (必填) ： 選擇聊天機器人類別
+
 Subcategory (必填) ： 選擇聊天機器人類別細項
+
 Email address (必填) ： 設定信箱
+
 Privacy policy URL (選填) ： 不用填
+
 Team of use URL (選填) ： 不用填
+
 最下面記得打勾！！
+
 ![](https://github.com/jun870805/line_bot/blob/1.0.1/Image/CreateChannel2.png?raw=true)
 
 <h3 id="Step1-4">取得頻道參數</h3>
