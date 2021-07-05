@@ -215,6 +215,11 @@ Flask 啟動
 
 <img src="https://github.com/jun870805/line_bot/blob/1.0.1/Image/SettingWebhook.png" width="375">
 
+Webhook 的原理 (截自[開發LINE聊天機器人不可不知的十件事][Webhook-doc])
+
+[Webhook-doc]:https://engineering.linecorp.com/zh-hant/blog/line-device-10/)
+
+<img src="https://github.com/jun870805/line_bot/blob/1.0.1/Image/Webhook.png" width="375">
 
 <h2 id="Step5">成果展示</h2>
 
