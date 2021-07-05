@@ -1,12 +1,12 @@
 Line 聊天機器人 架設 
 ==================
-![](https://github.com/jun870805/line_bot/blob/1.0.1/Image.jpg?raw=true)
+![](https://github.com/jun870805/line_bot/blob/1.0.1/Image/Image.jpg?raw=true)
 
 目錄
 ================
 
-*   [概述](#overview)
-    *   [哲學](#philosophy)
+*   [Line Developers](#overview)
+    *   [建立一個新的服務提供者](#philosophy)
     *   [行內 HTML](#html)
     *   [特殊字元自動轉換](#autoescape)
 *   [區塊元素](#block)
