@@ -25,16 +25,16 @@ Line 聊天機器人 架設
 
 <h3 id="Step1-1">登入Line帳號</h3>
 
-![](https://github.com/jun870805/line_bot/blob/1.0.1/Image/LoginLine.png?raw=true)
+<img src="hhttps://github.com/jun870805/line_bot/blob/1.0.1/Image/LoginLine.png" width="375">
 
 <h3 id="Step1-2">建立服務提供者</h3>
 
-![](https://github.com/jun870805/line_bot/blob/1.0.1/Image/NewProvider.png?raw=true)
+<img src="https://github.com/jun870805/line_bot/blob/1.0.1/Image/NewProvider.png" width="375">
 
 <h3 id="Step1-3">建立頻道</h3>
 
 選擇Create a Messaging API channel
-![](https://github.com/jun870805/line_bot/blob/1.0.1/Image/chooseType.png?raw=true)
+<img src="https://github.com/jun870805/line_bot/blob/1.0.1/Image/chooseType.png" width="375">
 
 channel icon (選填) ： 上傳聊天機器人logo圖片
 
@@ -42,7 +42,8 @@ channel name (必填) ： 設定聊天機器人名稱
 
 channel description (必填) ： 設定聊天機器人描述
 
-![](https://github.com/jun870805/line_bot/blob/1.0.1/Image/CreateChannel1.png?raw=true)
+<img src="https://github.com/jun870805/line_bot/blob/1.0.1/Image/CreateChannel1.png" width="375">
+
 Category (必填) ： 選擇聊天機器人類別
 
 Subcategory (必填) ： 選擇聊天機器人類別細項
@@ -55,18 +56,17 @@ Team of use URL (選填)
 
 最下面記得打勾！！
 
-![](https://github.com/jun870805/line_bot/blob/1.0.1/Image/CreateChannel2.png?raw=true)
+<img src="https://github.com/jun870805/line_bot/blob/1.0.1/Image/CreateChannel2.png" width="375">
 
 <h3 id="Step1-4">取得頻道參數</h3>
 
 在Basic settings頁面複製channel_secret
 
-![](https://github.com/jun870805/line_bot/blob/1.0.1/Image/channel_secret.png?raw=true)
+<img src="https://github.com/jun870805/line_bot/blob/1.0.1/Image/channel_secret.png" width="375">
 
 在Messaging API settings頁面複製Channel access token
 
-![](https://github.com/jun870805/line_bot/blob/1.0.1/Image/channel_access_token.png?raw=true)
-
+<img src="https://github.com/jun870805/line_bot/blob/1.0.1/Image/channel_access_token.png" width="375">
 
 **NOTE:** Line Bot Messaging API 詳細設定說明請[按此][line-eng-doc].
 
@@ -77,7 +77,7 @@ Team of use URL (選填)
 
 <h3 id="Step2-1">資料夾內檔案</h3>
 
-![](https://github.com/jun870805/line_bot/blob/1.0.1/Image/FilePackage.png?raw=true)
+<img src="https://github.com/jun870805/line_bot/blob/1.0.1/Image/FilePackage.png" width="375">
 
 <h3 id="Step2-2">requirements.txt</h3>
 <h3>Heroku會安裝這裡面的python套件</h3>
@@ -213,11 +213,11 @@ Flask 啟動
 
 將網址輸入在Messaging API settings頁面並開啟Use webhook
 
-![](https://github.com/jun870805/line_bot/blob/1.0.1/Image/SettingWebhook.png?raw=true)
+<img src="https://github.com/jun870805/line_bot/blob/1.0.1/Image/SettingWebhook.png" width="375">
 
 
 <h2 id="Step5">成果展示</h2>
 
 可以透過Messaging API settings頁面的QR code 加入好友並使用～～
 
-![](https://github.com/jun870805/line_bot/blob/1.0.1/Image/result.png?raw=true)
+<img src="https://github.com/jun870805/line_bot/blob/1.0.1/Image/result.png" width="375">
