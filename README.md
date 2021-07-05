@@ -34,7 +34,7 @@ Line 聊天機器人 架設
 
 <h3 id="Step1-1">登入Line帳號</h3>
 
-    ![](https://github.com/jun870805/line_bot/blob/1.0.1/Image/Image.jpg?raw=true)
+![](https://github.com/jun870805/line_bot/blob/1.0.1/Image/Image.jpg?raw=true)
 
 **NOTE:** Line Bot 詳細說明文件請[按此][line-eng-doc].
 
