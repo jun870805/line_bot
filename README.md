@@ -17,16 +17,8 @@ Line 聊天機器人 架設
     *   [app.py](#Step2-4)
     *   [Procfile](#Step2-5)
 *   [Heroku 部署](#Step3)
-    *   [登入Heroku帳號](#Step3-1)
-    *   [建立](#em)
-    *   [程式碼](#code)
-    *   [圖片](#img)
-*   [Line Bot 最終設定](#misc)
-    *   [設定Webhook](#backslash)
-    *   [](#autolink)
-*   [成果展示](#misc)
-    *   [跳脫字元](#backslash)
-    *   [自動連結](#autolink)
+*   [Line Bot 最終設定](#Step4)
+*   [成果展示](#Step5)
 
 
 <h2 id="Step1">創建Line Bot</h2>
@@ -57,9 +49,9 @@ Subcategory (必填) ： 選擇聊天機器人類別細項
 
 Email address (必填) ： 設定信箱
 
-Privacy policy URL (選填) ： 不用填
+Privacy policy URL (選填) 
 
-Team of use URL (選填) ： 不用填
+Team of use URL (選填) 
 
 最下面記得打勾！！
 
@@ -68,8 +60,11 @@ Team of use URL (選填) ： 不用填
 <h3 id="Step1-4">取得頻道參數</h3>
 
 在Basic settings頁面複製channel_secret
+
 ![](https://github.com/jun870805/line_bot/blob/1.0.1/Image/channel_secret.png?raw=true)
+
 在Messaging API settings頁面複製Channel access token
+
 ![](https://github.com/jun870805/line_bot/blob/1.0.1/Image/channel_access_token.png?raw=true)
 
 
@@ -84,7 +79,7 @@ Team of use URL (選填) ： 不用填
 
 ![](https://github.com/jun870805/line_bot/blob/1.0.1/Image/FilePackage.png?raw=true)
 
-<h3 id="Step2-2">requirements.txt</h3>
+<h3 id="Step2-2">requirements.txt Heroku會安裝這裡面的python套件</h3>
 
     gunicorn  # Python WSGI
     flask
@@ -94,16 +89,83 @@ Team of use URL (選填) ： 不用填
     requests  # 爬蟲PTT網站使用
     beautifulsoup4  # 爬蟲PTT網站使用
 
-<h3 id="Step2-3">config.ini</h3>
+<h3 id="Step2-3">config.ini app裡使用到的設定檔(將剛剛複製下來的參數加到檔案)</h3>
 
-<h3 id="Step2-4">app.py</h3>
+    [line-bot]
+    channel_access_token = [your_channel_access_token]
+    channel_secret = [your_channel_secret]
 
-<h3 id="Step2-5">Procfile</h3>
+<h3 id="Step2-4">app.py 主要執行Flask程式</h3>
+
+宣告Flask app
+
+    app = Flask(__name__) 
+
+LINE 聊天機器人的基本資料設定
+
+    config = configparser.ConfigParser()
+    config.read('config.ini')
+
+    line_bot_api = LineBotApi(config.get('line-bot', 'channel_access_token'))
+    handler = WebhookHandler(config.get('line-bot', 'channel_secret'))
+
+接收LINE資訊
+
+    @app.route("/callback", methods=['POST'])
+    def callback():
+        signature = request.headers['X-Line-Signature']
+
+        body = request.get_data(as_text=True)
+        app.logger.info("Request body: " + body)
+        
+        try:
+            print(body, signature)
+            handler.handle(body, signature)
+            
+        except InvalidSignatureError:
+            abort(400)
+
+        return 'OK'
+
+回應使用者輸入的文字
+
+    @handler.add(MessageEvent, message=TextMessage)
+    def response(event):
+        
+        # Line bot Verify驗證 帳號排除 
+        if event.source.user_id != "Udeadbeefdeadbeefdeadbeefdeadbeef":
+            
+            response_text = ""
+            for i in event.message.text:
+                response_text += i
+        
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text=response_text)
+            )
+
+增加抓取PTT Stock 文章列表
+
+    Name = event.message.text.split("-")[1]
+    url = "https://www.ptt.cc/bbs/Stock/search?q=author:"+Name            r = requests.get(url)
+    soup = BeautifulSoup(r.text, "html.parser")
+    results = soup.select("div.title")
+    for item in results:
+        a_item = item.select_one("a")
+        title = item.text
+        response_text += title+"\n"
+
+Flask 啟動
+
+    app.run()
+
+
+<h3 id="Step2-5">Procfile Heroku執行語法</h3>
+
+    web: gunicorn app:app [檔案名稱:Flask宣告參數]
 
 
 <h2 id="Step3">Heroku 部署</h2>
-
-<h3 id="Step3-1">登入Heroku帳號</h3>
 
 登入帳號：
 
@@ -141,3 +203,17 @@ Team of use URL (選填) ： 不用填
 
     https://[yourname].herokuapp.com/callback
 
+
+
+<h2 id="Step4">Heroku 部署</h2>
+
+將網址輸入在Messaging API settings頁面並開啟Use webhook
+
+![](https://github.com/jun870805/line_bot/blob/1.0.1/Image/SettingWebhook.png?raw=true)
+
+
+<h2 id="Step5">成果展示</h2>
+
+可以透過Messaging API settings頁面的QR code 加入好友並使用～～
+
+![](https://github.com/jun870805/line_bot/blob/1.0.1/Image/result.png?raw=true)
