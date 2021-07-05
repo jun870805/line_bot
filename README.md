@@ -5,12 +5,12 @@ Line 聊天機器人 架設
 目錄
 ================
 
-*   [創建Line Bot](#overview)
-    *   [登入Line帳號](#philosophy)
-    *   [建立服務提供者](#philosophy)
-    *   [建立頻道](#html)
-    *   [取得頻道參數](#html)
-*   [Flask Web Server](#block)
+*   [創建Line Bot](#Step1)
+    *   [登入Line帳號](#Step1-1)
+    *   [建立服務提供者](#Step1-2)
+    *   [建立頻道](#Step1-3)
+    *   [取得頻道參數](#Step1-4)
+*   [Flask Web Server](#Step2)
     *   [段落和換行](#p)
     *   [標題](#header)
     *   [區塊引言](#blockquote)
@@ -24,12 +24,21 @@ Line 聊天機器人 架設
     *   [圖片](#img)
 *   [Line Bot 最終設定](#misc)
     *   [設定Webhook](#backslash)
-    *   [打開](#autolink)
+    *   [](#autolink)
 *   [成果展示](#misc)
     *   [跳脫字元](#backslash)
     *   [自動連結](#autolink)
 
 
+<h2 id="Step1">創建Line Bot</h2>
+
+<h3 id="Step1-1">登入Line帳號</h3>
+
+    ![](https://github.com/jun870805/line_bot/blob/1.0.1/Image/Image.jpg?raw=true)
+
+**NOTE:** Line Bot 詳細說明文件請[按此][line-eng-doc].
+
+[line-eng-doc]:https://developers.line.biz/en/docs/messaging-api/
 
 <h2 id="Step3">Heroku 部署</h2>
 
