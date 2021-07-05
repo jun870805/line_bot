@@ -5,11 +5,12 @@ Line 聊天機器人 架設
 目錄
 ================
 
-*   [Line Developers](#overview)
-    *   [建立一個新的服務提供者](#philosophy)
-    *   [行內 HTML](#html)
-    *   [特殊字元自動轉換](#autoescape)
-*   [區塊元素](#block)
+*   [創建Line Bot](#overview)
+    *   [登入Line帳號](#philosophy)
+    *   [建立服務提供者](#philosophy)
+    *   [建立頻道](#html)
+    *   [取得頻道參數](#html)
+*   [Flask Web Server](#block)
     *   [段落和換行](#p)
     *   [標題](#header)
     *   [區塊引言](#blockquote)
