@@ -17,7 +17,7 @@ Line 聊天機器人 架設
     *   [清單](#list)
     *   [程式碼區塊](#precode)
     *   [分隔線](#hr)
-*   [Heroku 部署](#span)
+*   [Heroku 部署](#Step3)
     *   [登入Heroku帳號](#Step3-1)
     *   [建立](#em)
     *   [程式碼](#code)
@@ -31,6 +31,7 @@ Line 聊天機器人 架設
 
 
 
-<h3 id="Step3-1">特殊字元自動轉換</h3>
+<h2 id="Step3">Heroku 部署</h2>
+<h3 id="Step3-1">登入Heroku帳號</h3>
 登入帳號：
-    heroku login
+    > heroku login
