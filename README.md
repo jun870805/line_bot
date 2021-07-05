@@ -1,8 +1,8 @@
 Line 聊天機器人 架設 
 ==================
-![](https://github.com/jun870805/line_bot/blob/1.0.2/Image.jpg?raw=true)
+![](https://github.com/jun870805/line_bot/blob/1.0.1/Image.jpg?raw=true)
 
-目錄a
+目錄
 ================
 
 *   [概述](#overview)
