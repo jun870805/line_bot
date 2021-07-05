@@ -12,10 +12,10 @@ Line 聊天機器人 架設
     *   [取得頻道參數](#Step1-4)
 *   [Flask Web Server](#Step2)
     *   [資料夾內檔案](#Step2-1)
-    *   [requirements.txt](#Step2-2)
-    *   [config.ini](#Step2-3)
-    *   [app.py](#Step2-4)
-    *   [Procfile](#Step2-5)
+        *   [requirements.txt](#Step2-2)
+        *   [config.ini](#Step2-3)
+        *   [app.py](#Step2-4)
+        *   [Procfile](#Step2-5)
 *   [Heroku 部署](#Step3)
 *   [Line Bot 最終設定](#Step4)
 *   [成果展示](#Step5)
@@ -205,7 +205,7 @@ Flask 啟動
 
 
 
-<h2 id="Step4">Heroku 部署</h2>
+<h2 id="Step4">Line Bot 最終設定</h2>
 
 將網址輸入在Messaging API settings頁面並開啟Use webhook
 
