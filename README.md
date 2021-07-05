@@ -23,8 +23,8 @@ Line 聊天機器人 架設
     *   [程式碼](#code)
     *   [圖片](#img)
 *   [Line Bot 最終設定](#misc)
-    *   [跳脫字元](#backslash)
-    *   [自動連結](#autolink)
+    *   [設定Webhook](#backslash)
+    *   [打開](#autolink)
 *   [成果展示](#misc)
     *   [跳脫字元](#backslash)
     *   [自動連結](#autolink)
@@ -46,11 +46,11 @@ Line 聊天機器人 架設
 
 創建新的heroku專案
 
-    heroku create wmlserver[yourname]
+    heroku create [yourname]
 
 設定專案簡稱heroku
 
-    heroku git:remote -a wmlserver[yourname]
+    heroku git:remote -a [yourname]
 
 將資料夾內檔案更動提交到staging area(索引)
 
@@ -67,3 +67,8 @@ Line 聊天機器人 架設
 看heroku logs
 
     heroku logs --tail
+
+最後成功網址：
+
+    https://[yourname].herokuapp.com/callback
+
