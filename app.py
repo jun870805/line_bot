@@ -48,7 +48,7 @@ def callback():
     return 'OK'
 
 
-# 處理接收到 Line request 後回應
+# 處理接收到 Line Event Message 後回應
 @handler.add(MessageEvent, message=TextMessage)
 def response(event):
     
