@@ -79,7 +79,8 @@ Team of use URL (選填)
 
 ![](https://github.com/jun870805/line_bot/blob/1.0.1/Image/FilePackage.png?raw=true)
 
-<h3 id="Step2-2">requirements.txt Heroku會安裝這裡面的python套件</h3>
+<h3 id="Step2-2">requirements.txt</h3>
+<h3>Heroku會安裝這裡面的python套件</h3>
 
     gunicorn  # Python WSGI
     flask
@@ -89,13 +90,15 @@ Team of use URL (選填)
     requests  # 爬蟲PTT網站使用
     beautifulsoup4  # 爬蟲PTT網站使用
 
-<h3 id="Step2-3">config.ini app裡使用到的設定檔(將剛剛複製下來的參數加到檔案)</h3>
+<h3 id="Step2-3">config.ini</h3>
+<h3>app裡使用到的設定檔(將剛剛複製下來的參數加到檔案)</h3>
 
     [line-bot]
     channel_access_token = [your_channel_access_token]
     channel_secret = [your_channel_secret]
 
-<h3 id="Step2-4">app.py 主要執行Flask程式</h3>
+<h3 id="Step2-4">app.py</h3>
+<h3>主要執行Flask程式</h3>
 
 宣告Flask app
 
@@ -160,7 +163,8 @@ Flask 啟動
     app.run()
 
 
-<h3 id="Step2-5">Procfile Heroku執行語法</h3>
+<h3 id="Step2-5">Procfile</h3>
+<h3>Heroku執行語法</h3>
 
     web: gunicorn app:app [檔案名稱:Flask宣告參數]
 
