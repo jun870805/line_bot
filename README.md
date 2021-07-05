@@ -33,7 +33,9 @@ Line 聊天機器人 架設
 
 <h2 id="Step3">Heroku 部署</h2>
 
+
 <h3 id="Step3-1">登入Heroku帳號</h3>
+
 登入帳號：
 
     heroku login
@@ -46,3 +48,22 @@ Line 聊天機器人 架設
 
     heroku create wmlserver[yourname]
 
+設定專案簡稱heroku
+
+    heroku git:remote -a wmlserver[yourname]
+
+將資料夾內檔案更動提交到staging area(索引)
+
+    git add .
+
+提交版本並加上訊息
+
+    git commit -a -m "update heroku"
+
+推送到遠端
+
+    git push heroku HEAD:master
+
+看heroku logs
+
+    heroku logs --tail
