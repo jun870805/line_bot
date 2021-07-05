@@ -35,4 +35,4 @@ Line 聊天機器人 架設
 <h3 id="Step3-1">登入Heroku帳號</h3>
 登入帳號：
 
-    > heroku login
+    heroku login
