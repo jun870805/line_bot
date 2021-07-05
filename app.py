@@ -27,7 +27,7 @@ def home():
     if request.method == 'POST':
         text = request.form.get('value')
 
-    return "test"+text+"~~~~~"
+    return "test"+str(text)+"~~~~~"
 
 
 # 接收 LINE 的資訊
