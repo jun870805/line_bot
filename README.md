@@ -17,11 +17,20 @@ Line 聊天機器人 架設
     *   [清單](#list)
     *   [程式碼區塊](#precode)
     *   [分隔線](#hr)
-*   [區段元素](#span)
-    *   [連結](#link)
-    *   [強調](#em)
+*   [Heroku 部署](#span)
+    *   [登入Heroku帳號](#Step3-1)
+    *   [建立](#em)
     *   [程式碼](#code)
     *   [圖片](#img)
-*   [其他](#misc)
+*   [Line Bot 最終設定](#misc)
     *   [跳脫字元](#backslash)
     *   [自動連結](#autolink)
+*   [成果展示](#misc)
+    *   [跳脫字元](#backslash)
+    *   [自動連結](#autolink)
+
+
+
+<h3 id="Step3-1">特殊字元自動轉換</h3>
+登入帳號：
+    heroku login
