@@ -173,35 +173,35 @@ Flask 啟動
 
 登入帳號：
 
-    heroku login
+    #heroku login
 
 初始化目錄
 
-    git init
+    #git init
 
 創建新的heroku專案
 
-    heroku create [yourname]
+    #heroku create [yourname]
 
 設定專案簡稱heroku
 
-    heroku git:remote -a [yourname]
+    #heroku git:remote -a [yourname]
 
 將資料夾內檔案更動提交到staging area(索引)
 
-    git add .
+    #git add .
 
 提交版本並加上訊息
 
-    git commit -a -m "update heroku"
+    #git commit -a -m "update heroku"
 
 推送到遠端
 
-    git push heroku HEAD:master
+    #git push heroku HEAD:master
 
 看heroku logs
 
-    heroku logs --tail
+    #heroku logs --tail
 
 最後成功網址：
 
